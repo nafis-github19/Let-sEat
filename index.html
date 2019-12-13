@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Home</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+
+<header>
+	<div class="banner">
+	<div class="logo">
+		<a href="index.html"><img src="img/logo.gif" alt="lets eat logo"></a>
+	</div>
+
+	<div class="user">
+
+		<a href="login.html">LOG IN</a>
+		<a href="signup.html">SIGN UP</a>
+
+	</div>
+
+	<div class="hamburger-menu">
+   
+   <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"><img src="img/hamberger.png" width="105" height="72" alt=""/></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a target="_blank" href="about.html">About Us</a>
+    <a target="_blank" href="contactus.html">Contact Us</a>
+    <a target="_blank" href="#">Social Media</a>
+  </div>
+</div>
+    
+  </div>
+    
+
+    </div>
+		
+		
+			
+		</div>
+   
+
+
+</header>
+
+<section class="sec1">
+	<div id="sidenav" class="nav-animation">
+		<a id="italian" href="italian.html">Italian</a>
+		<a id="indian" href="indian.html">Indian</a>
+		<a id="american" href="american.html">American</a>
+		<a id="mexican" href="mexican.html">Mexican</a>
+		<a id="chinese" href="chinese.html">Chinese</a>
+		<a id="greek" href="greek.html">Greek</a>
+		<a id="caribbean" href="caribbean.html">Caribbean</a>
+		<a id="french" href="french.html">French</a>
+
+	</div>
+
+	<div class="second-part">
+
+		<div class="search-bar">
+			<input  id="search-word" type="search" name="" value="" placeholder="Let's Eat">
+
+			<button id="search-button" type="button" onclick="searchFunc();">Search</button>
+
+		</div>
+		<br><br>
+
+		<div class="slideshow">
+		<!-- Slideshow container -->
+			<div class="slideshow-container">
+
+		  <!-- Full-width images with number and caption text -->
+		  <div class="mySlides fade">
+			<div class="numbertext">1 / 8</div>
+			<img src="img/cuisine_slideshow/american.jpg" style="width:100%">
+			<div class="text">American Cuisine</div>
+		  </div>
+
+		  <div class="mySlides fade">
+			<div class="numbertext">2 / 8</div>
+			<img src="img/cuisine_slideshow/carribean.jpg" style="width:100%">
+			<div class="text">Caribbean Cuisine</div>
+		  </div>
+
+		  <div class="mySlides fade">
+			<div class="numbertext">3 / 8</div>
+			<img src="img/cuisine_slideshow/chinese.jpg" style="width:100%">
+			<div class="text">Chinese Cuisine</div>
+		  </div>
+
+			<div class="mySlides fade">
+			<div class="numbertext">4 / 8</div>
+			<img src="img/cuisine_slideshow/french.jpg" style="width:100%">
+			<div class="text">French Cuisine</div>
+		  </div>
+
+		  <div class="mySlides fade">
+			<div class="numbertext">5 / 8</div>
+			<img src="img/cuisine_slideshow/greek.jpg" style="width:100%">
+			<div class="text">Greek Cuisine</div>
+		  </div>
+
+		  <div class="mySlides fade">
+			<div class="numbertext">6 / 8</div>
+			<img src="img/cuisine_slideshow/indian.jpg" style="width:100%">
+			<div class="text">Indian Cuisine</div>
+		  </div>
+			<div class="mySlides fade">
+			<div class="numbertext">7 / 8</div>
+			<img src="img/cuisine_slideshow/italian.jpg" style="width:100%">
+			<div class="text">Italian Cuisine</div>
+		  </div>
+
+		  <div class="mySlides fade">
+			<div class="numbertext">8 / 8</div>
+			<img src="img/cuisine_slideshow/mexican.jpg" style="width:100%">
+			<div class="text">Mexican Cuisine</div>
+		  </div>
+
+		  <!-- Next and previous buttons -->
+		  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+
+		<!-- The dots/circles -->
+		<!-- <div style="text-align:center">
+		  <span class="dot" onclick="currentSlide(1)"></span>
+		  <span class="dot" onclick="currentSlide(2)"></span>
+		  <span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+		  <span class="dot" onclick="currentSlide(5)"></span>
+		  <span class="dot" onclick="currentSlide(6)"></span>
+			<span class="dot" onclick="currentSlide(7)"></span>
+		  <span class="dot" onclick="currentSlide(8)"></span>
+
+		</div> -->
+
+
+		</div>
+	</div>
+
+</section>
+
+<section class="section-two">
+
+	<div class="opinion-matters">
+		<a href="login.html"><img src="img/opinion.png" alt=""></a>
+
+	</div>
+
+</section>
+
+<section class="section-three">
+
+	<div class="images">
+
+		<img class="image-size" id="image1" src=""><br><br>
+		<img class="image-size" id="image2" src=""><br><br>
+		<img class="image-size" id="image3" src=""><br><br>
+		<img class="image-size" id="image4" src=""><br><br>
+		<img class="image-size" id="image5" src="">
+
+	</div>
+</section>
+
+<div class="clear">
+
+</div>
+
+	<script type="text/javascript" src="js/search.js"></script>
+	<script type="text/javascript" src="js/new_slider.js"></script>
+	<script type="text/javascript" src="js/hamburgermenu.js"></script>
+</body>
+</html>

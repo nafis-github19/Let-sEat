@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Review Page</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/comment.css">
+<script type="text/javascript" src="jq/jquery.js"></script>
+</head>
+
+<body>
+
+<header>
+	<div class="banner">
+	<div class="logo">
+		<a href="index.html"><img src="img/logo.gif" alt="lets eat logo"></a>
+	</div>
+
+	<div class="user">
+
+		<a href="login.html">LOG IN</a>
+		<a href="signup.html">SIGN UP</a>
+
+	</div>
+
+	<div class="hamburger-menu">
+   
+   <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"><img src="img/hamberger.png" width="105" height="72" alt=""/></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a target="_blank" href="about.html">About Us</a>
+    <a target="_blank" href="contactus.html">Contact Us</a>
+    <a target="_blank" href="#">Social Media</a>
+  </div>
+</div>
+    
+  </div>
+    </div>
+
+
+</header>
+
+<section class="sec1">
+	<div id="sidenav" class="nav-animation">
+		<a id="italian" href="italian.html">Italian</a>
+		<a id="indian" href="indian.html">Indian</a>
+		<a id="american" href="american.html">American</a>
+		<a id="mexican" href="mexican.html">Mexican</a>
+		<a id="chinese" href="chinese.html">Chinese</a>
+		<a id="greek" href="greek.html">Greek</a>
+		<a id="caribbean" href="caribbean.html">Caribbean</a>
+		<a id="french" href="french.html">French</a>
+
+	</div>
+
+	<div class="second-part">
+
+		<div class="search-bar">
+			<input id="search-word" type="search" name="" value="" placeholder="Let's Eat">
+
+			<button id="search-button" type="button" onclick="searchFunc();">Search</button>
+
+		</div>
+		<br><br>
+
+	</div>
+
+
+</section>
+
+<section class="comment-opinions">
+
+	<div class="card">
+		<div class="card-img1">
+			<img src="img/card_pic/chicken_curry.jpg" alt="">
+
+		</div>
+		<div class="card-content1" style="" >
+			<h2>Namaste Restaurant</h2><br>
+			<p><strong>William Smith</strong></p>
+			<p>This is an awesome restaurant serving Indian cuisine. I love their chicken curry.</p>
+
+
+		</div>
+
+		<div class="clear-func">
+
+		</div>
+
+	</div><br><br>
+
+	<div class="card">
+		<div class="card-img1">
+			<img src="img/card_pic/ita.jpg" alt="">
+
+		</div>
+		<div class="card-content1" style="" >
+			<h2>Park Side Restaurant</h2><br>
+			<p><strong>John Jones</strong></p>
+			<p>Best Italian food in town. The food were delicious and the staff were very friendly. I recommend the Beef Pasta.</p>
+
+
+		</div>
+
+		<div class="clear-func">
+
+		</div>
+
+	</div><br><br>
+
+	<div class="card">
+		<div class="card-img1">
+			<img src="img/card_pic/frenchdessert.jpg" alt="">
+
+		</div>
+		<div class="card-content1" style="" >
+			<h2>Bistro Eloise</h2><br>
+			<p><strong>Emmanuel Pierre</strong></p>
+			<p>They serve the best French authntic desserts. Quite affordable and tasty food. Good customer Service.</p>
+
+
+		</div>
+
+		<div class="clear-func">
+
+		</div>
+
+	</div>
+
+
+	<section class="comment-form">
+
+		<div class="form-border">
+
+		<form class="form-comment">
+
+			<label>Name of Restaurant</label><br>
+			<input id="restaurant-name" type="text" name="" > <br><br>
+
+			<label>Select Cuisine</label><br>
+			<select>
+				<option>Italian</option>
+				<option>Indian</option>
+				<option>American</option>
+				<option>Mexican</option>
+				<option>Chinese</option>
+				<option>Greek</option>
+				<option>Caribbean</option>
+				<option>French</option>
+			</select>  
+			 <br><br>
+
+			 <div id="star_rating"></div> <br>
+
+			<label>Customer Name</label><br>
+			<input id="customer-name" type="text" name="" > <br><br><br>
+
+			<label>Customer Review</label><br>
+			<textarea rows="8" cols="40"></textarea><br><br><br>
+
+
+			<button id="post-button" type="submit" onclick="postReview();">Post Review</button>
+			
+		</form>
+
+		</div>
+		
+	</section>
+
+</section>
+
+
+
+<section class="section-three">
+
+	<div class="images">
+
+		<img id="image1" src="">
+		<img id="image2" src="">
+		<img id="image3" src="">
+		<img id="image4" src="">
+		<img id="image5" src="">
+
+	</div>
+</section>
+
+<div class="clear">
+
+</div>
+
+	<script type="text/javascript" src="js/search.js"></script>
+	<script type="text/javascript" src="js/review.js"></script>
+</body>
+</html>

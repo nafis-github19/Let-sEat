@@ -1,0 +1,64 @@
+
+
+.comment-opinions{
+	position: absolute;
+	top: 30%;
+	left: 30%;
+}
+
+.card{
+  border: 2px solid black;
+  width: 600px;
+  margin: auto;
+}
+
+.card-image1{
+  width:200px;
+
+
+}
+
+.card img{
+  display: inline-block;
+  width: 100px;
+  
+  float: left;
+  
+}
+
+.card-content1{
+  width: 400px;
+  float: right;
+}
+
+.clear-func{
+  clear:both;
+}
+
+.form-border{
+  width: 80%;
+  border: 2px solid black;
+  margin: auto;
+  text-align: center;
+  padding: 5%;
+  margin-top: 5%;
+  font-size: 20px;
+  background-color: #fbe3b9;
+}
+
+.form-border input{
+  font-size: 130%;
+}
+
+.form-border select{
+  font-size: 125%;
+}
+
+.form-border textarea{
+/*  font-size: 120%;*/
+}
+
+.form-border button{
+  font-size: 120%;
+  padding: 20px;
+}

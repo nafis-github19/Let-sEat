@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ITALIAN</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link rel="stylesheet" type="text/css" href="css/comment.css">
+<link rel="stylesheet" type="text/css" href="css/admin.css">
+
+
+<style>
+      body{
+		  background-image: url('img/webpage_background/italianbg.jpg');
+			 background-repeat: no-repeat;
+       background-attachment: fixed;
+       background-size: cover;
+       
+       
+      }
+
+	 
+
+      .page{
+        width:400px;
+        padding:5px;
+        position:50px;
+        border-style: solid;
+        border-width: 3px;
+        border-color:red;
+         box-shadow: 10px 10px 8px #888888;
+      }
+      h1{
+        color:#0967A3;
+      }
+      .foodpage{
+		position: absolute;
+		top:20%;
+		
+        width:550px;
+        margin:20px;
+		margin-left:450px;
+
+      }
+	
+	.second-part{
+		background-color: transparent;
+	}
+	
+	.google-maps{
+		position: absolute;
+		top:30%;
+		left: 50%;
+		width: 40%;
+	}
+	
+	  #map{
+      height:400px;
+      width:100%;
+    }
+     
+    </style>
+
+</head>
+
+<body>
+
+<header>
+	<div class="banner">
+	<div class="logo">
+		<a href="index.html"><img src="img/logo.gif" alt="lets eat logo"></a>
+	</div>
+
+	<div class="user">
+
+		<a href="login.html">LOG IN</a>
+		<a href="signup.html">SIGN UP</a>
+
+	</div>
+
+	<div class="hamburger-menu">
+   
+   <div class="dropdown">
+  <button onclick="myFunction()" class="dropbtn"><img src="img/hamberger.png" width="105" height="72" alt=""/></button>
+  <div id="myDropdown" class="dropdown-content">
+    <a target="_blank" href="about.html">About Us</a>
+    <a target="_blank" href="contactus.html">Contact Us</a>
+    <a target="_blank" href="#">Social Media</a>
+  </div>
+</div>
+    
+  </div>
+    </div>
+
+
+</header>
+
+<section class="sec1">
+	<div id="sidenav" class="nav-animation">
+		<a id="italian" href="italian.html">Italian</a>
+		<a id="indian" href="indian.html">Indian</a>
+		<a id="american" href="american.html">American</a>
+		<a id="mexican" href="mexican.html">Mexican</a>
+		<a id="chinese" href="chinese.html">Chinese</a>
+		<a id="greek" href="greek.html">Greek</a>
+		<a id="caribbean" href="caribbean.html">Caribbean</a>
+		<a id="french" href="french.html">French</a>
+
+	</div>
+
+	<div class="second-part" >
+
+		<div class="search-bar">
+			<input id="search-word" type="search" name="" value="" placeholder="Let's Eat">
+
+			<button id="search-button" type="button" onclick="searchFunc();">Search</button>
+
+		</div>
+	
+
+	</div>
+
+	</section>
+
+<div class=""> 
+	  
+
+    <div class="foodpage">
+
+  <h1>Best Italian Food</h1>
+  <img class= "page" src="restaurant_rating/italian1.jpg" alt="">
+  <img class="page" src="restaurant_rating/italian2.jpg" alt="">
+   <img class="page" src="restaurant_rating/italian3.jpg" alt="">
+ <img class="page" src="restaurant_rating/italian4.jpg" alt="">
+<img class="page" src="restaurant_rating/italian5.jpg" alt="">
+  </div>
+	  </div>
+	  
+	  
+<section>
+  	<div class="google-maps">
+  		<h1>Google Map for Italian restaurants</h1>
+  		<div id="map"></div>
+  		
+  	</div>
+  </section>
+
+  
+
+
+
+
+<section class="section-three">
+
+	<div class="images">
+
+		<img class="image-size" id="image1" src="">
+		<img class="image-size" id="image2" src="">
+		<img class="image-size" id="image3" src="">
+		<img class="image-size" id="image4" src="">
+		<img class="image-size" id="image5" src="">
+
+	</div>
+</section>
+
+<div class="clear">
+
+</div>
+	
+	<script>
+    function initMap(){
+      // Map options
+      //Queens New York Center map
+      var options = {
+        zoom:12,
+        center:{lat:40.7282,lng:-73.7949}
+      }
+
+      // New map
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+      // Listen for click on map
+      google.maps.event.addListener(map, 'click', function(event){
+        // Add marker
+        addMarker({coords:event.latLng});
+      });
+
+     
+      // Array of markers
+      // Queens, NY
+      var markers = [
+        {
+          coords:{lat:40.7282,lng:-73.7949},
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Queens, NY</h1>'
+        },
+
+        // Caribbean Restaurants
+        {
+          coords:{lat:40.71750,lng:-73.740140},
+          content:'<h1>Caribbean Delight</h1>'
+        },
+        {
+          coords:{lat:40.698050,lng:-73.806600},
+          content:'<h1>Gs Homestyle</h1>'
+        },
+        {
+          coords:{lat:40.713529,lng:-73.754034},
+          content:'<h1>Nanas Bistro</h1>'
+        },
+        {
+          coords:{lat:40.68110,lng:-73.846330},
+          content:'<h1>Silver Star Roti</h1>'
+        },
+        {
+          coords:{lat:40.699770,lng:-73.831790},
+          content:'<h1>Caribbean Cabana</h1>'
+        },
+      ];
+
+      // Loop through markers
+      for(var i = 0;i < markers.length;i++){
+        // Add marker
+        addMarker(markers[i]);
+      }
+
+      // Add Marker Function
+      function addMarker(props){
+        var marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+          //icon:props.iconImage
+        });
+
+        // Check for customicon
+        if(props.iconImage){
+          // Set icon image
+          marker.setIcon(props.iconImage);
+        }
+
+        // Check content
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+          });
+
+          marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
+        }
+      }
+    }
+  </script>
+
+	<script type="text/javascript" src="js/search.js"></script>
+	
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3QjdVl5ekYofUvfeheV_8Ve5-TtbNPzA&callback=initMap">
+    </script>
+</body>
+</html>

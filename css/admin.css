@@ -1,0 +1,16 @@
+
+
+
+.heading{
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  line-height: 50px;
+}
+
+
+.exit a{
+  position: absolute;
+  top: 30%;
+  left: 80%;
+}
